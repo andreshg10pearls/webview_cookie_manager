@@ -23,13 +23,17 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
+    compileSdkVersion 34
+
+    
     namespace 'io.flutter.plugins.webview_cookie_manager'
-    compileSdk 34
+    // compileSdk 34
 
     namespace "io.flutter.plugins.webview_cookie_manager"
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 21
+        targetSdkVersion 34
     }
     lintOptions {
         disable 'InvalidPackage'
@@ -40,5 +44,6 @@ android {
 }
 
 dependencies {
-    testImplementation 'junit:junit:4.13.1'
+    // testImplementation 'junit:junit:4.13.1'
+    implementation "androidx.webkit:webkit:1.4.0"
 }
